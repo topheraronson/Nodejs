@@ -1,7 +1,7 @@
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 
-const message = document.querySelector("#message")
+const message = document.querySelector("#message`")
 // const message2 = document.querySelector("#message-2")
 
 message.textContent = ""
@@ -12,7 +12,7 @@ weatherForm.addEventListener("submit", (e) => {
 
     const location = search.value
 
-    fetch("http://localhost:3000/weather?address=" + location).then((response) => {
+    fetch("/weather?address=" + location).then((response) => {
     
         response.json().then((data) => {
             if (data.error) {
